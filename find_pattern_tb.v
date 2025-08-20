@@ -14,15 +14,15 @@ module find_pattern_tb ;
     initial begin 
         $dumpfile("find_pattern.vcd");
         $dumpvars(0,find_pattern_tb);
-         // Test sequence: 1 0 1 1 0 1 1 1
-        #10 in_bit = 1;  // input = 1
-        #10 in_bit = 0;  // input = 0
-        #10 in_bit = 1;  // input = 1
-        #10 in_bit = 1;  // input = 1 -> detect = 1
-        #10 in_bit = 0;  // input = 0
-        #10 in_bit = 1;  // input = 1
-        #10 in_bit = 1;  // input = 1 -> detect = 1
-        #10 in_bit = 1;  // input = 1 -> detect = 1 (overlapping)
+        
+        #10 in_bit = 1;  
+        #10 in_bit = 0;  
+        #10 in_bit = 1;  
+        #10 in_bit = 1; 
+        #10 in_bit = 0;  
+        #10 in_bit = 1; 
+        #10 in_bit = 1;  
+        #10 in_bit = 1; 
 
         #50 $finish;
     end

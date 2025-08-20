@@ -6,8 +6,8 @@ module find_pattern(
    localparam S0 = 2'b00;  // no '1' yet
     localparam S1 = 2'b01;  // last input was '1'
     localparam S2 = 2'b10;  // detected "11"
-// 4 inputs , output is reg in procedural block,custom types with typedef , we are also specifying space taken by this datatype
-// defining variables with our custom datatypes
+
+
  reg [1:0] state, next_state;
 
 // reset logic (async)
