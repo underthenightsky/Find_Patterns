@@ -19,3 +19,19 @@ Whenever two consecutive `1`s are detected, the output `detected` goes high.
 - **S2** → Sequence `11` detected (output asserted)  
 
 ### State Diagram:
+  S0 --(1)--> S1
+ S1 --(1)--> S2 (detected=1)
+ S1 --(0)--> S0
+ S2 --(1)--> S2 (detected=1, allows overlapping)
+ S2 --(0)--> S0
+ ---
+ ## 📂 Files
+- `find_pattern.v` → Verilog source code for the FSM  
+- `find_pattern_tb.v` → Testbench to simulate the design  
+
+---
+
+## ▶️ Simulation
+1. Compile the design and testbench using your Verilog simulator (e.g., **Icarus Verilog**, **ModelSim**, or **Vivado**).
+2. Run the simulation and generate a waveform (`.vcd`) file.
+3. Open the waveform in **GTKWave** (or another viewer) to visualize inputs and outputs.
